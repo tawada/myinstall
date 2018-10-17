@@ -1,9 +1,10 @@
 .PHONY: install
 install:
 	git clone git@github.com:tawada/sd.git
-	cd sd;gcc -o sd program.c && mv sd ~/.bin/
+	cd sd;gcc -o sd program.c && mv sd ~/bin/
 	git clone git@github.com:tawada/fex.git
-	cd fex;gcc -o fex program.c && mv fex ~/.bin/
+	cd fex;gcc -o fex program.c && mv fex ~/bin/
 	git clone git@github.com:tawada/thaw.git
-	cd thaw;gcc -o thaw program.c && mv thaw ~/.bin/
-	
+	cd thaw;gcc -o thaw program.c && mv thaw ~/bin/
+	echo "alias wer=\"ps aux|grep `whoami`\"" >> ~/.bashrc
+	echo "alias nof=\"echo `hostname`|mail `whoami` -s Notisfy\"" >> ~/.bashrc
