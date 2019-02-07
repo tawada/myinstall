@@ -3,6 +3,7 @@ install:~/.bash_profile ~/.bashrc ~/bin/sd ~/bin/fex ~/bin/thaw
 	echo "export PATH=\"~/bin:$$PATH\"" >> ~/.bashrc
 	echo "alias wer=\"ps aux|grep `whoami`\"" >> ~/.bashrc
 	echo "alias nof=\"echo `hostname`|mail `whoami` -s Notisfy\"" >> ~/.bashrc
+	echo "alias git-tree='git log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"'" >> ~/.bashrc
 ~/bin/sd: /tmp/sd/sd ~/bin
 	cp $< $@
 ~/bin/fex: /tmp/fex/fex ~/bin
